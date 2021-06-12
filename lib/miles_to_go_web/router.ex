@@ -58,7 +58,7 @@ defmodule MilesToGoWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: MilesToGoWeb.Telemetry
+      live_dashboard "/dashboard", metrics: MilesToGoWeb.Telemetry, ecto_repos: [MilesToGo.Repo]
       forward "/mailbox", Plug.Swoosh.MailboxPreview, base_path: "/dev/mailbox"
     end
   end

@@ -20,7 +20,7 @@ defmodule MilesToGo.MixProject do
   def application do
     [
       mod: {MilesToGo.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :os_mon]
     ]
   end
 
@@ -54,7 +54,8 @@ defmodule MilesToGo.MixProject do
       {:phx_gen_auth, "~> 0.6", only: [:dev], runtime: false},
       {:swoosh, "~> 1.0"},
       {:hackney, "~> 1.9"},
-      {:faker, "~> 0.16.0", only: [:dev, :test], runtime: false}
+      {:faker, "~> 0.16.0", only: [:dev, :test], runtime: false},
+      {:ecto_psql_extras, "~> 0.2"},
     ]
   end
 
