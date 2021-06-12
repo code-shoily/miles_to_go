@@ -1,5 +1,7 @@
 # MilesToGo
 
+`MilesToGo` is a Phoenix LiveView app and GraphQL API to add and track trips, or anything that involves you to move from one place to another. With this, you can set goals and start tracking whether your riding a bike, running or hiking.
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
