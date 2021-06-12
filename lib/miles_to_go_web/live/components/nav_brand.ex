@@ -1,4 +1,7 @@
 defmodule MilesToGoWeb.NavBrandComponent do
+  @moduledoc """
+  Brand component.
+  """
   use MilesToGoWeb, :surface_component
 
   def render(assigns) do

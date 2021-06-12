@@ -1,4 +1,7 @@
 defmodule MilesToGoWeb.NavBarComponent do
+  @moduledoc """
+  The top nav bar component.
+  """
   use MilesToGoWeb, :surface_live_component
 
   alias MilesToGoWeb.NavBrandComponent

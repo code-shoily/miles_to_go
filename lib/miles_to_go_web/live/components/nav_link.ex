@@ -1,4 +1,7 @@
 defmodule MilesToGoWeb.NavLinkComponent do
+  @moduledoc """
+  Menulink for top-bar.
+  """
   use MilesToGoWeb, :surface_component
 
   def render(assigns) do

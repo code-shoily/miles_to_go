@@ -1,4 +1,7 @@
 defmodule MilesToGoWeb.NavUserDropDownComponent do
+  @moduledoc """
+  User drop-down component. Used to show user specific actions.
+  """
   use MilesToGoWeb, :surface_component
 
   prop current_user, :map
