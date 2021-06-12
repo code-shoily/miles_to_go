@@ -1,0 +1,20 @@
+<div class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container is-desktop">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-4-widescreen is-6-desktop is-8-tablet">
+          <div class="columns is-vcentered">
+            <div class="column">
+              <%= render "_flash.html", conn: @conn %>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <%= @inner_content %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

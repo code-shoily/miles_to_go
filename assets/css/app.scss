@@ -1,0 +1,29 @@
+@import "theme";
+@import "bulma";
+
+a {
+    @extend .has-text-weight-semibold;
+}
+
+input, .select {
+    @extend .is-rounded;
+}
+
+button {
+    @extend .is-rounded;
+    @extend .has-text-weight-semibold;
+}
+
+.navbar-main-link {
+    @extend .navbar-item;
+    @extend .is-size-5;
+    @extend .px-6;
+}
+
+.navbar-item {
+    @extend .px-6;
+}
+
+.is-active {
+    @extend .has-text-primary;
+}

@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-content">
+    <div class="title is-3 has-text-primary has-text-centered">Log in</div>
+    <%= form_for @conn,
+        Routes.user_session_path(@conn, :create),
+        [as: :user, class: "form", novalidate: true],
+        fn f -> %>
+
+      <%= if @error_message do %>
+        <div class="notification is-danger">
+          <p><%= @error_message %></p>
+        </div>
+      <% end %>
+
+      <%= bulma_form_input f, :email, icon: "envelope" %>
+      <%= bulma_form_input f, :password, icon: "lock" %>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <%= checkbox f, :remember_me %>
+            <%= label f, :remember_me, "Remember me" %>
+          </label>
+        </div>
+      </div>
+      <div class="p-2"></div>
+      <%= bulma_form_submit "Enter" %>
+    <% end %>
+    <hr />
+    <p class="has-text-centered">
+      Don't have an account? <%= link "Register", to: Routes.user_registration_path(@conn, :new) %>
+    </p>
+    <p class="has-text-centered">
+      <%= link "Forgot your password?", to: Routes.user_reset_password_path(@conn, :new) %>
+    </p>
+  </div>
+</div>

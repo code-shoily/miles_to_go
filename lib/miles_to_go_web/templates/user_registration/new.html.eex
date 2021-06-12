@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-content">
+    <div class="title is-3 has-text-primary has-text-centered">Register</div>
+    <%= form_for @changeset, Routes.user_registration_path(@conn, :create), [novalidate: true], fn f -> %>
+    <%= if @changeset.action do %>
+      <div class="notification is-danger">
+        <p>Oops, something went wrong! Please check the errors below.</p>
+      </div>
+    <% end %>
+    <%= bulma_form_input f, :name, icon: "user" %>
+    <div class="field">
+      <label class="label">Date of Birth</label>
+      <div class="control">
+        <%= date_select f, :date_of_birth, builder: fn b -> %>
+        <span class="select">
+          <%= b.(:day, []) %>
+        </span>
+        <span class="select">
+          <%= b.(:month, []) %>
+        </span>
+        <span class="select">
+          <%= b.(:year, [options: 1920..(Date.utc_today.year - 18)]) %>
+        </span>
+      <% end %>
+    </div>
+    <%= bulma_form_input f, :email, icon: "envelope" %>
+    <%= bulma_form_input f, :password, icon: "lock" %>
+    <%= bulma_form_input f, :password_confirmation, icon: "lock" %>
+    <div class="field">
+      <label class="checkbox">
+        <input type="checkbox">
+        I agree to the <a href="#">terms and conditions</a>
+      </label>
+    </div>
+    <div class="p-2"></div>
+    <%= bulma_form_submit "Register" %>
+  <% end %>
+  <hr />
+  <p class="has-text-centered">
+    Already a member? <%= link "Log in", to: Routes.user_session_path(@conn, :new) %>
+  </p>
+  <p class="has-text-centered">
+    <%= link "Forgot your password?", to: Routes.user_reset_password_path(@conn, :new) %>
+  </p>
+</div>
+</div>
