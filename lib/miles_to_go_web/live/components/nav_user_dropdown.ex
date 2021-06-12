@@ -11,7 +11,7 @@ defmodule MilesToGoWeb.NavUserDropDownComponent do
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="navbar-item has-dropdown is-hoverable">
-          <Link to="" label={{ @current_user.name }} class="navbar-link" />
+          <Link to="" label={{ @current_user.email }} class="navbar-link" />
           <div class="navbar-dropdown">
             <Link label="Settings" class="navbar-item" to={{ Routes.user_settings_path(@socket, :edit) }} />
             <div class="navbar-divider" />
