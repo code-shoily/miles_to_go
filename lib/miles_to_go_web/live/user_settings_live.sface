@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="columns">
+    <div class="column is-one-quarter">
+      <div class="card">
+        <div class="card-content">
+        <aside class="menu">
+          <p class="menu-label">
+            User Settings
+          </p>
+          <ul class="menu-list">
+            <li><a>Change Email</a></li>
+            <li><a>Change Password</a></li>
+            <li><a>Security</a></li>
+          </ul>
+        </aside>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-content">
+          HELLO WORLD
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -47,10 +47,11 @@ defmodule MilesToGoWeb.Router do
   scope "/", MilesToGoWeb do
     pipe_through [:browser, :require_authenticated_user]
 
-    live "/", HomeLive, :index
-    get "/users/settings", UserSettingsController, :edit
-    put "/users/settings", UserSettingsController, :update
-    get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+    live "/", HomeLive
+    live "/user/settings", UserSettingsLive
+    get "/users/preferences", UserSettingsController, :edit
+    put "/users/preferences", UserSettingsController, :update
+    get "/users/preferences/confirm_email/:token", UserSettingsController, :confirm_email
   end
 
   if Mix.env() in [:dev, :test] do

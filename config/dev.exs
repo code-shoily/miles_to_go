@@ -60,7 +60,7 @@ config :miles_to_go, MilesToGoWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/miles_to_go_web/(live|views)/.*(ex)$",
+      ~r"lib/miles_to_go_web/(live|views)/.*(ex|sface)$",
       ~r"lib/miles_to_go_web/templates/.*(eex)$"
     ]
   ]

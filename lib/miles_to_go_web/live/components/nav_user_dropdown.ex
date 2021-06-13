@@ -4,6 +4,8 @@ defmodule MilesToGoWeb.NavUserDropDownComponent do
   """
   use MilesToGoWeb, :surface_component
 
+  alias Surface.Components.LivePatch
+
   prop current_user, :map
 
   def render(assigns) do
@@ -13,19 +15,12 @@ defmodule MilesToGoWeb.NavUserDropDownComponent do
         <div class="navbar-item has-dropdown is-hoverable">
           <Link to="" label={{ @current_user.email }} class="navbar-link" />
           <div class="navbar-dropdown">
-            <Link label="Settings" class="navbar-item" to={{ Routes.user_settings_path(@socket, :edit) }} />
+            <LivePatch label="Settings" class="navbar-item" to="/user/settings" />
             <div class="navbar-divider" />
             <Link
-              label="Log out"
+              label="Log Out"
               class="navbar-item has-text-danger"
               to={{ Routes.user_session_path(@socket, :delete) }}
-              opts={{ method: :delete }}
-            />
-            <div class="navbar-divider" />
-            <Link
-              label="Log out from all sessions"
-              class="navbar-item has-text-danger"
-              to={{ Routes.user_session_path(@socket, :force_logout) }}
               opts={{ method: :delete }}
             />
           </div>
