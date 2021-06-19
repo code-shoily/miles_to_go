@@ -51,11 +51,13 @@ defmodule MilesToGo.MixProject do
       {:credo, "~> 1.5.2"},
       {:surface, "~> 0.5"},
       {:surface_formatter, "~> 0.5"},
+      {:surface_atom_shorthand_converter, "~> 0.1.0",
+       github: "paulstatezny/surface_atom_shorthand_converter", ref: "master"},
       {:phx_gen_auth, "~> 0.6", only: [:dev], runtime: false},
       {:swoosh, "~> 1.0"},
       {:hackney, "~> 1.9"},
       {:faker, "~> 0.16.0", only: [:dev, :test], runtime: false},
-      {:ecto_psql_extras, "~> 0.2"},
+      {:ecto_psql_extras, "~> 0.2"}
     ]
   end
 
