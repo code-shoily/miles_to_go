@@ -5,7 +5,7 @@ defmodule MilesToGoWeb.NavBrandComponent do
   use MilesToGoWeb, :surface_component
 
   def render(assigns) do
-    ~H"""
+    ~F"""
     <div class="navbar-brand">
       <a class="navbar-item" href="">
         <span class="title is-4">

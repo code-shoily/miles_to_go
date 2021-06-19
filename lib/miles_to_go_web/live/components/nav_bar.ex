@@ -11,12 +11,13 @@ defmodule MilesToGoWeb.NavBarComponent do
   prop current_user, :map
 
   def render(assigns) do
-    ~H"""
+    IO.inspect(assigns.current_user, label: Oops)
+    ~F"""
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <NavBrandComponent />
       <div class="navbar-menu" id="navMenu">
         <NavLinkComponent />
-        <NavUserDropDownComponent current_user={{ @current_user }} />
+        <NavUserDropDownComponent current_user={@current_user} />
       </div>
     </nav>
     """

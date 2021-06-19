@@ -5,7 +5,7 @@ defmodule MilesToGoWeb.NavLinkComponent do
   use MilesToGoWeb, :surface_component
 
   def render(assigns) do
-    ~H"""
+    ~F"""
     <div class="navbar-end">
       <Link to="/" label="Home" class="navbar-main-link is-active" />
       <Link to="/" label="Tracks" class="navbar-main-link" />
