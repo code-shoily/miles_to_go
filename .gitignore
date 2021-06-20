@@ -1,3 +1,6 @@
+post.md
+.parcel-cache/
+.shadow-cljs/
 .envrc
 .elixir_ls/
 .idea/
