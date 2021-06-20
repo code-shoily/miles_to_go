@@ -1,6 +1,5 @@
 (ns app.main
   (:require
-   ["nprogress" :as nprogress]
    ["phoenix_html" :as phoenix_html]
    ["phoenix" :refer [Socket]]
    ["phoenix_live_view" :refer [LiveSocket]]))
