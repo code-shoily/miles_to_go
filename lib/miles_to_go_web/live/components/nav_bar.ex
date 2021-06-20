@@ -11,7 +11,6 @@ defmodule MilesToGoWeb.NavBarComponent do
   prop current_user, :map
 
   def render(assigns) do
-    IO.inspect(assigns.current_user, label: Oops)
     ~F"""
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <NavBrandComponent />

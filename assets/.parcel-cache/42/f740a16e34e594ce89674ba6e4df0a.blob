@@ -1,0 +1,29 @@
+"use strict";
+var _app = _interopRequireDefault(require("../css/app.scss"));
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("HELLO THERE")(document.querySelectorAll(".notification .delete") || []).forEach(function ($delete) {
+    var $notification = $delete.parentNode;
+    $delete.addEventListener("click", function () {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+// Burger Menu
+document.addEventListener('DOMContentLoaded', function () {
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach(function (el) {
+      el.addEventListener('click', function () {
+        var target = el.dataset.target;
+        var $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
