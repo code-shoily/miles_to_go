@@ -1,5 +1,5 @@
 @import "theme";
-@import "bulma";
+@import "../node_modules/bulma/bulma.sass";
 
 a {
     @extend .has-text-weight-semibold;

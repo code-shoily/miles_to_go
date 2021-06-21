@@ -21,13 +21,18 @@ config :miles_to_go, MilesToGoWeb.Endpoint,
   code_reloader: true,
   check_origin: false,
   watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
+    bash: [
+      "cljs-start.sh",
+      "node_modules/.bin/shadow-cljs",
+      "watch",
+      "app",
       cd: Path.expand("../assets", __DIR__)
-    ]
+    ],
+    sass: [
+      "--watch",
+      "assets/css/app.scss",
+      "priv/static/css/assets.css",
+    ],
   ]
 
 # ## SSL Support
@@ -58,7 +63,8 @@ config :miles_to_go, MilesToGoWeb.Endpoint,
 config :miles_to_go, MilesToGoWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+      ~r"priv/static/js/app.js$",
+      ~r"priv/static/.*(css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
       ~r"lib/miles_to_go_web/(live|views)/.*(ex)$",
       ~r"lib/miles_to_go_web/templates/.*(eex)$"
